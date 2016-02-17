@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Emanuel Galván Fontalba</string>
+    <string name="hola">Hola mundo desde Strings.xml</string>
+</resources>

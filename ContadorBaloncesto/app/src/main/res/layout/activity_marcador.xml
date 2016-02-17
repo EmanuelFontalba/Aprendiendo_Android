@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:orientation="horizontal"
+    tools:context="com.example.azahara.contadorbaloncesto.MarcadorActivity"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="3">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="right|top"
+                    android:layout_weight="1" >
+
+                    <Button
+                        android:id="@+id/menosLocal"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+
+                        android:textColor="#ffffff"
+                        android:background="@drawable/boton_redondo"
+                        android:text="-"
+                        android:layout_gravity="left|right"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/masLocal"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_margin="4dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/boton_redondo"
+                        android:text="+"
+                        android:layout_gravity="left|right"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <Button
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:text="+3"
+                    android:id="@+id/boton3Local"
+                    android:textStyle="bold"
+                    android:background="@drawable/botonpulsado"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff"
+                    android:nestedScrollingEnabled="false" />
+
+                <Button
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:text="+2"
+                    android:id="@+id/boton2Local"
+                    android:textStyle="bold"
+                    android:background="@drawable/botonpulsado"
+                    android:singleLine="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:text="+1"
+                    android:id="@+id/boton1Local"
+                    android:textStyle="bold"
+                    android:background="@drawable/botonpulsado"
+                    android:singleLine="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+
+                android:weightSum="2"
+                android:layout_gravity="bottom">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Local"
+                    android:id="@+id/textViewLocal"
+                    android:gravity="center_horizontal"
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom"
+                    android:textSize="20dp"
+                    android:textColor="#4af4e5"
+                    android:textStyle="bold"
+                    android:background="#181818" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Visit"
+                    android:id="@+id/textViewVisitante"
+                    android:layout_weight="1"
+                    android:layout_gravity="bottom"
+                    android:textSize="20dp"
+                    android:gravity="center_horizontal"
+                    android:textColor="#4af4e5"
+                    android:singleLine="false"
+                    android:password="false"
+                    android:textStyle="bold"
+                    android:background="#181818" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:background="#272727"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="00"
+                    android:id="@+id/resultadoLocal"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#38e8f5"
+                    android:textSize="40dp"
+                    android:gravity="center_horizontal"
+                    android:textStyle="bold"
+                    android:background="#1b1b1b" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="2dp"
+                    android:text="00"
+                    android:id="@+id/resultadoVisitante"
+                    android:layout_weight="1"
+                    android:layout_gravity="center_vertical"
+                    android:textColor="#38e8f5"
+                    android:gravity="center_horizontal"
+                    android:textSize="40dp"
+                    android:textStyle="bold"
+                    android:background="#1b1b1b" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="bottom">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="right">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|top"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/masVisitante"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_margin="4dp"
+                        android:textColor="#ffffff"
+                        android:background="@drawable/boton_redondo"
+                        android:text="+"
+                        android:layout_gravity="left|right"
+                        android:textStyle="bold"
+                        />
+
+                    <Button
+                        android:id="@+id/menosVisitante"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+
+                        android:textColor="#ffffff"
+                        android:background="@drawable/boton_redondo"
+                        android:text="-"
+                        android:layout_gravity="left|right"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <Button
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:text="+3"
+                    android:id="@+id/boton3Visitante"
+                    android:textStyle="bold"
+                    android:background="@drawable/botonpulsado"
+                    android:singleLine="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:text="+2"
+                    android:id="@+id/boton2Visitante"
+                    android:textStyle="bold"
+                    android:background="@drawable/botonpulsado"
+                    android:singleLine="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff" />
+
+                <Button
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="65dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="1dp"
+                    android:text="+1"
+                    android:id="@+id/boton1Visitante"
+                    android:textStyle="bold"
+                    android:background="@drawable/botonpulsado"
+                    android:singleLine="true"
+                    android:layout_alignParentTop="true"
+                    android:textSize="20dp"
+                    android:textColor="#ffffff" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>
